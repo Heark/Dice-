@@ -19,6 +19,10 @@ def drawPlayer()
     drawImage( $playerimage, $Player.getY(), $Player.getY() )
 end
 console( $Player.getx() )
+def logMovement()
+    console( $Player.getX() )
+    console( $Player.getY() )
+end
 // Drawing the background
 def drawBackground()
     drawImage( $bg, 00, 00 )
@@ -32,6 +36,7 @@ end
 onEachFrame() do
     drawBackground()
     showFPS()
+    logMovement()
     movePlayer()
     drawPlayer()
 end
